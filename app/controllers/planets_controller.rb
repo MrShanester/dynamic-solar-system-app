@@ -36,5 +36,6 @@ class PlanetsController < ApplicationController
       render json: {message: "Planet Deleted"}
     else  
       render json: {error: planet.error.full_messages}
+    end
   end
 end
