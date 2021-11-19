@@ -6,11 +6,14 @@ Rails.application.routes.draw do
   patch "/planets" => "planets#update"
   delete "/planets" => "planets#destroy"
 
-  #System Routes
+  # System Routes
   get "/systems" => "systems#index"
   get "/systems/:id" => "systems#show"
   post "/systems" => "systems#create"
   patch "/systems" => "systems#update"
   delete "/systems" => "systems#destroy"
+
+  # User Routes
+  post "/users" => "users#create"
   
 end
