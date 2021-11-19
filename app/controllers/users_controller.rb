@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     else 
       render json: {error: user.errors.all_messages}, status: :bad_request
     end
-    end
+    
     
   end
 end
