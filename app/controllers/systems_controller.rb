@@ -28,6 +28,7 @@ class SystemsController < ApplicationController
       render json: systems.as_json
     else
       render json: {error: systems.errors.full_messages}
+    end
     
   end
 
