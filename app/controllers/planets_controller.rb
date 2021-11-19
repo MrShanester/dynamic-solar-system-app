@@ -14,7 +14,7 @@ class PlanetsController < ApplicationController
     if planet.save
       render json: planet.as_json
     else 
-      render json: {error: planet.error.full_messages}
+      render json: {error: planet.errors.full_messages}
     end
   end
 
@@ -28,6 +28,11 @@ class PlanetsController < ApplicationController
     planet.description = params[:description] || planet.description
     planet.image = params[:image] || planet.image
     planet.is_star = params[:is_star] || planet.is_star
+    if planet.save
+      render json: planet.as_json
+    else  
+      render json: {error: planet.errors.full_messages}
+    end
   end
 
   def destroy
@@ -35,7 +40,7 @@ class PlanetsController < ApplicationController
     if planet.delete
       render json: {message: "Planet Deleted"}
     else  
-      render json: {error: planet.error.full_messages}
+      render json: {error: planet.errors.full_messages}
     end
   end
 end

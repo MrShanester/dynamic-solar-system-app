@@ -14,7 +14,7 @@ class SystemsController < ApplicationController
     if systems.save
       render json: systems.as_json
     else 
-      render json: {error: systems.error.full_messages}
+      render json: {error: systems.errors.full_messages}
     end
   end
 
@@ -24,6 +24,10 @@ class SystemsController < ApplicationController
     systems.name = params[:name] || systems.name
     systems.image = params[:image] || systems.image
     systems.description = params[:description] || systems.description
+    if systems.save
+      render json: systems.as_json
+    else
+      render json: {error: systems.errors.full_messages}
     
   end
 
@@ -32,7 +36,7 @@ class SystemsController < ApplicationController
     if systems.delete
       render json: {message: "System Deleted"}
     else  
-      render json: {error: systems.error.full_messages}
+      render json: {error: systems.errors.full_messages}
     end
   end
 end
