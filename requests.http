@@ -25,7 +25,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5M
 }
 
 ### Planets Edit
-PATCH http://localhost:3000/planets/3.as_json
+PATCH http://localhost:3000/planets/5.as_json
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5MzN9.RiEStvNi0x4kkUS0uTifOF6lTPt4c4pDdJzTUwK_Zh8
 
@@ -41,7 +41,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5M
 }
 
 ### Planets Destroy
-DELETE http://localhost:3000/planets/3.as_json
+DELETE http://localhost:3000/planets/5.as_json
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5MzN9.RiEStvNi0x4kkUS0uTifOF6lTPt4c4pDdJzTUwK_Zh8
 
@@ -68,7 +68,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5M
 }
 
 ### Systems Edit
-PATCH http://localhost:3000/systems/5.as_json
+PATCH http://localhost:3000/systems/7.as_json
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5MzN9.RiEStvNi0x4kkUS0uTifOF6lTPt4c4pDdJzTUwK_Zh8
 
@@ -80,7 +80,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5M
 }
 
 ### Systems Destroy
-DELETE http://localhost:3000/systems/3.as_json
+DELETE http://localhost:3000/systems/7.as_json
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5MzN9.RiEStvNi0x4kkUS0uTifOF6lTPt4c4pDdJzTUwK_Zh8
 
@@ -90,10 +90,10 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5MzN9.RiEStvNi0x4kkUS0uTifOF6lTPt4c4pDdJzTUwK_Zh8
 
 {
-  "username": "MyManFriday",
-  "email": "friday@test.com",
-  "password": "friday",
-  "password_confirmation": "friday" 
+  "username": "MyManMonday",
+  "email": "monday@test.com",
+  "password": "monday",
+  "password_confirmation": "monday" 
 }
 
 ### Sessions create (login)
