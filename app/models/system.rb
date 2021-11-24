@@ -1,4 +1,4 @@
 class System < ApplicationRecord
   belongs_to :user
-  has_many :systems
+  has_many :planets
 end

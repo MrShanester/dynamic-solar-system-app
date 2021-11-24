@@ -3,15 +3,15 @@ Rails.application.routes.draw do
   get "/planets" => "planets#index"
   get "/planets/:id" => "planets#show"
   post "/planets" => "planets#create"
-  patch "/planets" => "planets#update"
-  delete "/planets" => "planets#destroy"
+  patch "/planets/:id" => "planets#update"
+  delete "/planets/:id" => "planets#destroy"
 
   # System Routes
   get "/systems" => "systems#index"
   get "/systems/:id" => "systems#show"
   post "/systems" => "systems#create"
-  patch "/systems" => "systems#update"
-  delete "/systems" => "systems#destroy"
+  patch "/systems/:id" => "systems#update"
+  delete "/systems/:id" => "systems#destroy"
 
   # User Routes
   post "/users" => "users#create"

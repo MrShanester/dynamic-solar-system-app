@@ -19,15 +19,15 @@ class SystemsController < ApplicationController
   end
 
   def update
-    systems = System.find_by[id: params[:id]]
-    systems.user_id = systems.user_id
+    systems = System.find_by(id: params[:id])
+    systems.user_id = params[:user_id] || systems.user_id
     systems.name = params[:name] || systems.name
     systems.image = params[:image] || systems.image
     systems.description = params[:description] || systems.description
     if systems.save
       render json: systems.as_json
     else
-      render json: {error: systems.errors.full_messages}
+      render json: {error: systems.errors.full_messages}, status: 418
     end
     
   end

@@ -1,0 +1,75 @@
+### Planets Index
+GET http://localhost:3000/planets.as_json
+Content-Type: application/json
+
+### Planets Show
+GET http://localhost:3000/planets/1.as_json
+Content-Type: application/json
+
+### Planets Create
+POST http://localhost:3000/planets.as_json
+Content-Type: application/json
+
+{
+  "system_id": 1,
+  "name": "Tau-Delta",
+  "diameter": 140000,
+  "mass": 224,
+  "orbital_distance": 17.6,
+  "description": "Amonia gas giant with rings.",
+  "image": "",
+  "is_star": false
+}
+
+### Planets Edit
+PATCH http://localhost:3000/planets/3.as_json
+Content-Type: application/json
+
+{
+  "system_id": 1,
+  "name": "Tau-Beta",
+  "diameter": 23000,
+  "mass": 12.7,
+  "orbital_distance": 2.3,
+  "description": "Barren world comprised of silicon and iron.",
+  "image": "",
+  "is_star": false
+}
+
+### Planets Destroy
+DELETE http://localhost:3000/planets/3.as_json
+Content-Type: application/json
+
+### Systems Index
+GET http://localhost:3000/systems.as_json
+Content-Type: application/json
+
+### Systems Show
+GET http://localhost:3000/systems/1.as_json
+Content-Type: application/json
+
+### Systems Create
+POST http://localhost:3000/systems.as_json
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "name": "New Sol",
+  "image": "",
+  "description": "Home star of Earth."
+}
+
+### Systems Edit
+PATCH http://localhost:3000/systems/5.as_json
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "name": "OLD Sol",
+  "image": "",
+  "description": "Home star of Earth."
+}
+
+### Systems Destroy
+DELETE http://localhost:3000/systems/3.as_json
+Content-Type: application/json
