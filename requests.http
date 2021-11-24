@@ -1,14 +1,17 @@
 ### Planets Index
 GET http://localhost:3000/planets.as_json
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5MzN9.RiEStvNi0x4kkUS0uTifOF6lTPt4c4pDdJzTUwK_Zh8
 
 ### Planets Show
 GET http://localhost:3000/planets/1.as_json
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5MzN9.RiEStvNi0x4kkUS0uTifOF6lTPt4c4pDdJzTUwK_Zh8
 
 ### Planets Create
 POST http://localhost:3000/planets.as_json
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5MzN9.RiEStvNi0x4kkUS0uTifOF6lTPt4c4pDdJzTUwK_Zh8
 
 {
   "system_id": 1,
@@ -24,6 +27,7 @@ Content-Type: application/json
 ### Planets Edit
 PATCH http://localhost:3000/planets/3.as_json
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5MzN9.RiEStvNi0x4kkUS0uTifOF6lTPt4c4pDdJzTUwK_Zh8
 
 {
   "system_id": 1,
@@ -39,18 +43,22 @@ Content-Type: application/json
 ### Planets Destroy
 DELETE http://localhost:3000/planets/3.as_json
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5MzN9.RiEStvNi0x4kkUS0uTifOF6lTPt4c4pDdJzTUwK_Zh8
 
 ### Systems Index
 GET http://localhost:3000/systems.as_json
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5MzN9.RiEStvNi0x4kkUS0uTifOF6lTPt4c4pDdJzTUwK_Zh8
 
 ### Systems Show
 GET http://localhost:3000/systems/1.as_json
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5MzN9.RiEStvNi0x4kkUS0uTifOF6lTPt4c4pDdJzTUwK_Zh8
 
 ### Systems Create
 POST http://localhost:3000/systems.as_json
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5MzN9.RiEStvNi0x4kkUS0uTifOF6lTPt4c4pDdJzTUwK_Zh8
 
 {
   "user_id": 1,
@@ -62,6 +70,7 @@ Content-Type: application/json
 ### Systems Edit
 PATCH http://localhost:3000/systems/5.as_json
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5MzN9.RiEStvNi0x4kkUS0uTifOF6lTPt4c4pDdJzTUwK_Zh8
 
 {
   "user_id": 1,
@@ -73,3 +82,26 @@ Content-Type: application/json
 ### Systems Destroy
 DELETE http://localhost:3000/systems/3.as_json
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5MzN9.RiEStvNi0x4kkUS0uTifOF6lTPt4c4pDdJzTUwK_Zh8
+
+### Users Create 
+POST http://localhost:3000/users.as_json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5MzN9.RiEStvNi0x4kkUS0uTifOF6lTPt4c4pDdJzTUwK_Zh8
+
+{
+  "username": "MyManFriday",
+  "email": "friday@test.com",
+  "password": "friday",
+  "password_confirmation": "friday" 
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5MzN9.RiEStvNi0x4kkUS0uTifOF6lTPt4c4pDdJzTUwK_Zh8
+
+{
+  "email": "friday@test.com",
+  "password": "friday"
+}

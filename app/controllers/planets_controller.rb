@@ -1,4 +1,6 @@
 class PlanetsController < ApplicationController
+  before_action :authenticate_user
+
   def index
     planets = Planet.all 
     render json: planets.as_json

@@ -1,4 +1,6 @@
 class SystemsController < ApplicationController
+  before_action :authenticate_user
+  
   def index
     systems = System.all 
     render json: systems.as_json
