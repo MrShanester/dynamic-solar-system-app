@@ -2,7 +2,9 @@ class SystemsController < ApplicationController
   before_action :authenticate_user
   
   def index
-    systems = System.all 
+    user = User.find_by(id: current_user.id)
+    systems = user.systems.all
+    
     render json: systems.as_json
   end
 
