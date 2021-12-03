@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   # System Routes
   get "/systems" => "systems#index"
   get "/systems/:id" => "systems#show"
+  get "/name" => "systems#name"
   post "/systems" => "systems#create"
   patch "/systems/:id" => "systems#update"
   delete "/systems/:id" => "systems#destroy"

@@ -6,13 +6,17 @@ class SystemsController < ApplicationController
     render json: systems.as_json
   end
 
+  def name
+    render json: current_user.username.as_json
+  end
+
   def show
     systems = System.find_by(id: params[:id])
     render json: systems.as_json
   end
 
   def create
-    systems = System.new(user_id: params[:user_id], name: params[:name], image: params[:image], description: params[:description])
+    systems = System.new(user_id: current_user.id, name: params[:name], image: params[:image], description: params[:description])
     if systems.save
       render json: systems.as_json
     else 
