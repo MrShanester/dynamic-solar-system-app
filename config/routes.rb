@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # Planet Routes
-  get "/planets" => "planets#index"
+  get "/planets/index/:id" => "planets#index"
   get "/planets/:id" => "planets#show"
   post "/planets" => "planets#create"
   patch "/planets/:id" => "planets#update"

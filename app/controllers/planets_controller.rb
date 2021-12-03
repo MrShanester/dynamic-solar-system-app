@@ -2,7 +2,8 @@ class PlanetsController < ApplicationController
   before_action :authenticate_user
 
   def index
-    planets = Planet.all 
+    systems = System.find_by(id: params[:id])
+    planets = systems.planets.all 
     render json: planets.as_json
   end
 
