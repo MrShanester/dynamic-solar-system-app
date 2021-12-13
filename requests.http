@@ -1,7 +1,7 @@
 ### Planets Index
 GET http://localhost:3000/planets.as_json
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5MzN9.RiEStvNi0x4kkUS0uTifOF6lTPt4c4pDdJzTUwK_Zh8
+
 
 ### Planets Show
 GET http://localhost:3000/planets/1.as_json
@@ -58,7 +58,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5M
 ### Systems Create
 POST http://localhost:3000/systems.as_json
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5MzN9.RiEStvNi0x4kkUS0uTifOF6lTPt4c4pDdJzTUwK_Zh8
+
 
 {
   "user_id": 1,
@@ -99,7 +99,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5M
 ### Sessions create (login)
 POST http://localhost:3000/sessions
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzc4Njk5MzN9.RiEStvNi0x4kkUS0uTifOF6lTPt4c4pDdJzTUwK_Zh8
+
 
 {
   "email": "friday@test.com",

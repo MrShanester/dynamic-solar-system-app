@@ -30,7 +30,7 @@ class PlanetsController < ApplicationController
     planet.orbital_distance = params[:orbital_distance] || planet.orbital_distance
     planet.description = params[:description] || planet.description
     planet.image = params[:image] || planet.image
-    planet.is_star = params[:is_star] || planet.is_star
+    planet.is_star = planet.is_star
     if planet.save
       render json: planet.as_json
     else  
