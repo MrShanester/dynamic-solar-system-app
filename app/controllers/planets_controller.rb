@@ -13,7 +13,7 @@ class PlanetsController < ApplicationController
   end
 
   def create
-    planet = Planet.new(system_id: params[:system_id], name: params[:name], diameter: params[:diameter], mass: params[:mass], orbital_distance: params[:orbital_distance], description: params[:description], image: params[:image], color: params[:color] is_star: params[:is_star])
+    planet = Planet.new(system_id: params[:system_id], name: params[:name], diameter: params[:diameter], mass: params[:mass], orbital_distance: params[:orbital_distance], description: params[:description], image: params[:image], color: params[:color], is_star: params[:is_star])
     if planet.save
       render json: planet.as_json
     else 
