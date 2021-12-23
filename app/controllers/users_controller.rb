@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     if user.save
       render json: {message: "User Created"}, tatus: :created
     else 
-      render json: {error: user.errors.all_messages}, status: :bad_request
+      render json: {error: user.errors.full_messages}, status: :bad_request
     end
   end
 end
